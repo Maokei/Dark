@@ -103,9 +103,6 @@ public class App extends Canvas implements Runnable {
 		//graphics context
 		Graphics g = bs.getDrawGraphics();
 		
-		//g.setColor(Color.BLACK);
-		//g.fillRect(0, 0, getWidth(), getHeight());
-		
 		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
 		
 		g.dispose();
