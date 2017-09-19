@@ -95,13 +95,13 @@ public class App extends Canvas implements Runnable {
 			createBufferStrategy(3);
 			return;
 		}
-		
+		render.clear();
 		render.render();
 		for(int i = 0; i < pixels.length; i++) {
 			pixels[i] = render.pixels[i];
 		}
 		//graphics context
-		Graphics g = bs.getDrawGraphics();
+		Graphics g = bs.getDrawGraphics();s
 		
 		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
 		

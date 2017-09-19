@@ -11,7 +11,7 @@ package se.maokei.dark.graphics;
 public class Render {
 	private int width, height;
 	public int[] pixels;
-	
+
 	public Render(int width, int height) {
 		this.width = width;
 		this.height = height;
@@ -24,5 +24,12 @@ public class Render {
 				pixels[x + y * width] = 0xff0ff;
 			}
 		}
+	}
+
+	public void clear(){
+		for(int i = 0; i < pixels.length; i++){
+			pixels[i] = 0;
+		}
+
 	}
 }
