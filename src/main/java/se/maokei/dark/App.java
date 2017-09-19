@@ -81,9 +81,9 @@ public class App extends Canvas implements Runnable {
 
 	public void update() {
 		try {
+			//to slow things down before propper timing
 			thread.sleep(20);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
