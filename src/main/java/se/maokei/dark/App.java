@@ -102,7 +102,7 @@ public class App extends Canvas implements Runnable {
 		}
 		//graphics context
 		Graphics g = bs.getDrawGraphics();s
-		
+			
 		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
 		
 		g.dispose();
