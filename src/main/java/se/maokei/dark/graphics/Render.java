@@ -11,6 +11,9 @@ package se.maokei.dark.graphics;
 public class Render {
 	private int width, height;
 	public int[] pixels;
+	private int counter = 0;
+	private int xtime = 0;
+	private int ytime = 50;
 
 	public Render(int width, int height) {
 		this.width = width;
@@ -19,9 +22,15 @@ public class Render {
 	}
 	
 	public void render() {
+		counter++;
+		if(counter % 100 == 0) {xtime++;}
+		if(counter % 800 == 0) {ytime++;} 
+		
 		for(int y = 0; y < height; y++) {
+			if(ytime >= height) break;
 			for(int x = 0; x < width; x++) {
-				pixels[x + y * width] = 0xff0ff;
+				if(xtime >= width) break;
+				pixels[xtime + ytime * width] = 0xff0ff;
 			}
 		}
 	}

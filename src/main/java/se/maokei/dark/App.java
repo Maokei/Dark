@@ -19,7 +19,7 @@ import se.maokei.dark.util.Constants;
 
 /**
  * @class App
- *  
+ * @description Main appli
  * */
 public class App extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
@@ -101,7 +101,7 @@ public class App extends Canvas implements Runnable {
 			pixels[i] = render.pixels[i];
 		}
 		//graphics context
-		Graphics g = bs.getDrawGraphics();s
+		Graphics g = bs.getDrawGraphics();
 			
 		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
 		
