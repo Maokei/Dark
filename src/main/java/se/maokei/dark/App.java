@@ -73,8 +73,17 @@ public class App extends Canvas implements Runnable {
 
 
 	public void run() {
+		long lastTime = System.nanoTime();
+		final double ns = 1000000000.0 / 60.0;
+		double delta = 0;
 		while(running) {
-			update();
+			long current = system.nanoTime();
+			delta += (current - lastTime) / ns;
+			lastTime = curent;
+			while(delta >= 1) {
+				update();
+				delta--;
+			}
 			render();
 		}
 	}
