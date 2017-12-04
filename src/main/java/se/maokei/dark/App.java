@@ -19,7 +19,7 @@ import se.maokei.dark.util.Constants;
 
 /**
  * @class App
- * @description Main appli
+ * @description Main app class
  * */
 public class App extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
