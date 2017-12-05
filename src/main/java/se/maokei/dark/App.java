@@ -75,26 +75,35 @@ public class App extends Canvas implements Runnable {
 	public void run() {
 		long lastTime = System.nanoTime();
 		final double ns = 1000000000.0 / 60.0;
+		long timer = System.currentTimeMillis();
 		double delta = 0;
+		int frames = 0;
+		int updates = 0;
 		while(running) {
-			long current = system.nanoTime();
+			long current = System.nanoTime();
 			delta += (current - lastTime) / ns;
-			lastTime = curent;
+			lastTime = current;
 			while(delta >= 1) {
 				update();
+				updates++;
 				delta--;
 			}
 			render();
+			frames++;
+			//larger than one seond
+			if(System.currentTimeMillis() - timer > 1000) {
+				timer += 1000;
+				//display
+				frame.setTitle(Constants.title + " " + updates + " upd, " + frames + " fps");
+				//System.out.println(updates + " upd, " + frames + " fps");
+				frames = 0;
+				updates = 0;
+			}
 		}
 	}
 
 	public void update() {
-		try {
-			//to slow things down before propper timing
-			thread.sleep(20);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+
 	}
 	
 	private void render() {
